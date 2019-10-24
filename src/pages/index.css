@@ -1,0 +1,83 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/root/root.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/logo/logo.css);
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/user-info/user-info.css);
+@import url(../blocks/button-edit/button-edit.css);
+@import url(../blocks/button/button.css);
+@import url(../blocks/places-list/places-list.css);
+@import url(../blocks/place-card/place-card.css);
+@import url(../blocks/popup/popup.css);
+
+body {
+  background-color: #000;
+}
+
+.popup__fullscreen_background {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.image-container {
+  position: relative;
+}
+
+.popup__fullscreen_image {
+  max-width: 80vw;
+  max-height: 80vh;
+  z-index: 3;
+}
+
+.popup__close_fullscreen {
+  position: absolute;
+  top: -36px;
+  right: -36px;
+  z-index: 3;
+}
+
+.validate-message {
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 5px;
+  line-height: 14px;
+  font-size: 14px;
+  font-family: 'Inter';
+}
+
+.error-message {
+  opacity: 0;
+  color: #FF0000;
+}
+
+.input-container__invalid .error-message{
+  opacity: 1;
+}
+
+.black-button {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+
+
+/* Это стиль для сообщений об ошибке */
+.error {
+  width  : 100%;
+  padding: 0;
+ 
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+ 
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}

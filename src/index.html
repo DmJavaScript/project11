@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+        <div class="user-info">
+            <div class="user-info__data">
+                <button class="button user-info__button-edit">Редактировать</button>
+            </div>
+            <button class="button user-info__button">+</button>
+        </div>
+    </div>
+    <div class="places-list root__section">
+    </div>
+    <div class="popup popup__edit-profile">
+      <div class="popup__content">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form id="form-profile" class="popup__form" name="profile">
+            <div class="input-container">
+                <input id='name' required type="text" name="name" class="popup__input popup__input_type_name" minlength="2" maxlength="30" placeholder="Имя">
+                <span id='error-name' class='error-message validate-message'></span>
+            </div>
+            <div class="input-container">
+                <input id='profession' required type="text" name="profession" class="popup__input popup__input_type_profession" minlength="2" maxlength="30" placeholder="О себе">
+                <span id='error-profession' class='error-message validate-message'></span>
+            </div>
+            <button id="submit-info" type='submit' class="button popup__button">+</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup__add-place">
+      <div class="popup__content">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form id='form-new' class="popup__form" name="new">
+            <div class="input-container">
+                <input id='place' required type="text" name="place" class="popup__input popup__input_type_place" minlength="2" maxlength="30" placeholder="Название">
+                <span id='error-place' class='error-message validate-message'></span>
+            </div>
+            <div class="input-container">
+                <input id='link' required type="url" name="link" class="popup__input popup__input_type_link" placeholder="Поместите сюда ссылку на фотографию места">
+                <span id='error-link' class='error-message validate-message'></span>
+            </div>
+            <button id="submit-place" type='submit' class="button popup__button">+</button>
+        </form>
+      </div>
+    </div>
+    <div class='popup popup__fullscreen_background'>
+      <div class='image-container'>
+          <img src="<%=require('')%>" class='popup__fullscreen_image' alt="">
+          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close popup__close_fullscreen">
+      </div>
+    </div>
+  </div>
+  <script src='./scripts/script.js'></script>
+</body>
+</html>

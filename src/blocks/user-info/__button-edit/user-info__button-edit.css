@@ -1,0 +1,16 @@
+.user-info__button-edit {
+  height: 18px;
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+.user-info__button-edit:hover {
+  background-color: white;
+  color: #000;
+}
+
+@media screen and (max-width: 980px) {
+  .user-info__button-edit {
+    margin: 25px auto 0;
+  }
+}
