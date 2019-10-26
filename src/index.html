@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 <body>
   <div class="root">
@@ -58,11 +58,12 @@
     </div>
     <div class='popup popup__fullscreen_background'>
       <div class='image-container'>
-          <img src="<%=require('')%>" class='popup__fullscreen_image' alt="">
+          <img src="" class='popup__fullscreen_image' alt="">
           <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close popup__close_fullscreen">
       </div>
     </div>
   </div>
   <script src='./scripts/script.js'></script>
 </body>
+<script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </html>

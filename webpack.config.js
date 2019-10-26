@@ -9,16 +9,11 @@ const isDev = process.env.NODE_ENV === 'development'; // создаем пере
 
 
 module.exports = {
-    entry: { main: './src/index.js' },
+    entry: { main: './src/scripts/script.js' },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: './js/[name].[chunkhash].js' // изменено согласно вебинару
     },
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        port: 9000
-    }, // необязательно, но добавил из советов вебинара
     module: {
         rules: [
             {
