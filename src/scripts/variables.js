@@ -2,14 +2,14 @@ export const initialCards = [];
 const options = {};
 
 import {Api} from './Api.js';
-const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort3' : 'https://praktikum.tk/cohort3';
+const serverUrl = NODE_ENV === 'development' ? 'https://mesto.nomoreparties.co/cohort3' : 'http://mesto.nomoreparties.co/cohort3';
 export const api = new Api({
     baseUrl: serverUrl,
     headers: {
       authorization: '2be5a16d-b37d-40f5-850a-90e709aeb96d',
       'Content-Type': 'application/json'
     }
-}); 
+});
 
 import {CardList} from './CardList.js';
 api.getInitialCards().then(data => {
