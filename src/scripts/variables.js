@@ -2,7 +2,7 @@ export const initialCards = [];
 const options = {};
 
 import {Api} from './Api.js';
-const serverUrl = NODE_ENV === 'development' ? 'https://mesto.nomoreparties.co/cohort3' : 'http://mesto.nomoreparties.co/cohort3';
+const serverUrl = NODE_ENV === 'development' ? 'http://mesto.nomoreparties.co/cohort3' : 'https://mesto.nomoreparties.co/cohort3';
 export const api = new Api({
     baseUrl: serverUrl,
     headers: {
